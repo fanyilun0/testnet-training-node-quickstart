@@ -5,12 +5,3 @@ Qwen/Qwen2.5-1.5B-Instruct:
   lora_rank: 32
   lora_alpha: 40
   lora_dropout: 0.04
-  target_modules:
-    - v_proj
-    - q_proj
-    - down_proj
-    - k_proj
-    - o_proj
-    - ffn
-    - gate_proj
-    - up_proj
