@@ -16,6 +16,7 @@ class LoraTrainingArguments:
     per_device_train_batch_size: int
     gradient_accumulation_steps: int
     num_train_epochs: int
+    learning_rate: float
     lora_rank: int
     lora_alpha: int
     lora_dropout: int
@@ -44,7 +45,7 @@ def train_lora(
         per_device_train_batch_size=training_args.per_device_train_batch_size,
         gradient_accumulation_steps=training_args.gradient_accumulation_steps,
         warmup_steps=100,
-        learning_rate=2e-4,
+        learning_rate=training_args.learning_rate,
         bf16=True,
         logging_steps=20,
         output_dir="outputs",
